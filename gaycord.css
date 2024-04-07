@@ -1,7 +1,6 @@
 @-moz-document regexp("https://discord\\.com/channels/.*"), regexp("https://discord\\.com/(?!channels).*") {
-
 /*
- *  gaycord - gay discord theme (rev. 6)
+ *  gaycord - gay discord theme (rev. 7)
  *
  *  Source: https://github.com/6gk/gkay
  *  By gk <messagke@gmail.com> [github.com/6gk]
@@ -58,22 +57,23 @@ s { text-decoration: #229e9e line-through !important; }
 }
 
 /*[class*="textArea"] [data-slate-string="true"],*/ /* message input box (didnt work well) */
-[class*="messageContent-"] ol,
-[class*="messageContent-"] li,
-[class*="messageContent-"] [class*="spoiler"][aria-expanded="true"] span,
-[class*="messageContent-"] h1,
-[class*="messageContent-"] h2,
-[class*="messageContent-"] h3,
-[class*="messageContent-"] h4,
-[class*="messageContent-"] h5,
-[class*="messageContent-"] h6,
-[class*="messageContent-"] h7,
-[class*="messageContent-"] h8,
+[class*="messageContent_"] ol,
+[class*="messageContent_"] li,
+[class*="messageContent_"] [class*="spoiler"][aria-expanded="true"] span,
+[class*="messageContent_"] h1,
+[class*="messageContent_"] h2,
+[class*="messageContent_"] h3,
+[class*="messageContent_"] h4,
+[class*="messageContent_"] h5,
+[class*="messageContent_"] h6,
+[class*="messageContent_"] h7,
+[class*="messageContent_"] h8,
 [class*="typing-"],
 [class*="embed-"] [class*="embedTitle"],
 [class*="title-"],
-.messageContent__21e69 li,
-.messageContent__21e69,
+.messageContent_abea64 li,
+.messageContent_abea64,
+[class*="messagelogger-"],
 blockquote {
     list-style-position: inside;
 	background: linear-gradient(
@@ -129,7 +129,7 @@ div[class*="systemMessage-"] a > span {
 .app-focused [class*="typing-"],
 .app-focused [class*="embed-"] [class*="embedTitle"],
 .app-focused [class*="title-"],
-.app-focused .messageContent__21e69,
+.app-focused .messageContent_abea64,
 .app-focused blockquote {
 	animation: rainbow 3s linear infinite;
 
@@ -143,5 +143,6 @@ code.hljs, code, .hljs * { color: var(--text-normal) !important; }
 [class*="username"]:not([style]) {
 	color: var(--text-normal);
 }
-
+[class*="messagelogger-"] {
+    opacity: 0.3;
 }
