@@ -1,0 +1,67 @@
+@-moz-document domain("twitter.com") {
+/*
+ *  gaybird - gay twitter (rev. 0)  [name ideas welcome]
+ *
+ *  Source: https://github.com/eepykate/gkay
+ *  By kate <eepykate@gmail.com> [github.com/eepykate]
+ *  Licensed under MIT (expat)
+ */
+
+@keyframes rainbow {
+	0%   { background-position: 0    0; }
+	100% { background-position: 100% 0; }
+}
+/*light*/
+/*html {
+   	--red: #ff6d6d;
+	--yellow: #b29d21;
+	--green: #30ba39;
+	--cyan: #42b4b4;
+	--blue: #778eff;
+	--pink: #ff6efa;
+}
+/*dark*/
+html {
+    --red: #f99;
+	--yellow: #ebdd8e;
+	--green: #7dee84;
+	--cyan: #52d2d2;
+	--blue: #aab8ff;
+	--pink: #f5a5e1;
+
+}
+
+time,
+[data-testid="User-Name"] > div:last-of-type span {
+    opacity: 0.7
+}
+
+time,
+[data-testid="User-Name"] span,
+[data-testid="tweetText"] > span {
+
+	background: linear-gradient(
+		to right,
+		var(--red),
+		var(--yellow),
+		var(--green),
+		var(--cyan),
+		var(--blue),
+		var(--pink),
+		var(--red),
+		var(--yellow),
+		var(--green),
+		var(--cyan)
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	background-size: 300% 100%;
+	animation: rainbow 3s linear infinite;
+}
+
+/* firefox: save resources when unfocused */
+:-moz-window-inactive {
+	animation-play-state: paused !important;
+}
+}
