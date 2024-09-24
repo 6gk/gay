@@ -1,6 +1,5 @@
-@-moz-document regexp("https://discord\\.com/channels/.*"), regexp("https://discord\\.com/(?!channels).*") {
 /*
- *  gaycord - gay discord theme (rev. 7)
+ *  gaycord - gay discord theme (rev. 8)
  *
  *  Source: https://github.com/6gk/gkay
  *  By gk <messagke@gmail.com> [github.com/6gk]
@@ -57,7 +56,9 @@ s { text-decoration: #229e9e line-through !important; }
 }
 
 /*[class*="textArea"] [data-slate-string="true"],*/ /* message input box (didnt work well) */
-[class*="messageContent_"] ol,
+[class*="messageContent_"],
+[class*="messageContent_"] li,
+/*[class*="messageContent_"] ol,
 [class*="messageContent_"] li,
 [class*="messageContent_"] [class*="spoiler"][aria-expanded="true"] span,
 [class*="messageContent_"] h1,
@@ -67,7 +68,7 @@ s { text-decoration: #229e9e line-through !important; }
 [class*="messageContent_"] h5,
 [class*="messageContent_"] h6,
 [class*="messageContent_"] h7,
-[class*="messageContent_"] h8,
+[class*="messageContent_"] h8, */
 [class*="typing-"],
 [class*="embed-"] [class*="embedTitle"],
 [class*="title-"],
@@ -129,7 +130,8 @@ div[class*="systemMessage-"] a > span {
 .app-focused [class*="typing-"],
 .app-focused [class*="embed-"] [class*="embedTitle"],
 .app-focused [class*="title-"],
-.app-focused .messageContent_abea64,
+.app-focused [class*="messageContent_"],
+.app-focused [class*="messageContent_"] li,
 .app-focused blockquote {
 	animation: rainbow 3s linear infinite;
 
